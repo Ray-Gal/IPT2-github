@@ -7,6 +7,12 @@ public class SimpleCalculator {
         return num1 + num2;
     }
 
+    // Method for subtraction
+    public static double subtract(double num1, double num2) {
+        return num1 - num2;
+    }
+
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         
@@ -17,6 +23,7 @@ public class SimpleCalculator {
         System.out.println("");
         System.out.println("Choose an operation: ");
         System.out.println("1. Addition (+)");
+        System.out.println("2. Subtraction (-)");
         System.out.println("");
         System.out.println("Operation to be use: ");
         int choice = scanner.nextInt();
@@ -35,6 +42,11 @@ public class SimpleCalculator {
         switch (choice) {
             case 1:
                 result = add(num1, num2);
+                System.out.println("");
+                System.out.println("Result: " + result);
+                break;
+            case 2:
+                result = subtract(num1, num2);
                 System.out.println("");
                 System.out.println("Result: " + result);
                 break;
